@@ -1,6 +1,92 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;   
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-tap-highlight-color: transparent;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #666666;
+    position: relative;
+}
+
+html {
+    line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    line-height: 1.2;
+    font-family: 'Roboto Slab', serif;
+}
+
+a:focus {
+    outline: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+ul {
+    list-style: none;
+}
+
+// Header Logo
+
+.header-logo {
+    opacity: 0;
+    transition: opacity 2s ease-in;
+}
+
+// Map
+
+.map {
+    width: 100%;
+   
+    height:300px;
+    
+    margin-bottom: 30px;
+}
+
+// Global Text Styling
+.philosophy,
+.rolls,
+.location,
+.menu,
+.reviews,
+.order-now {
+    margin: 30px 0;
+    padding: 30px;
+    color: #fff;
+    .heading {
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        h2,
+        h3 {
+            padding: 15px 0;
+        }
+        h2 {
+            color: #e35f52;   
+        }
+    }
+    .text {
+        p {
+            padding: 5px 0;
+            letter-spacing: 1px;
+        }
+    }
+}

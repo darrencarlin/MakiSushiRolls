@@ -1,0 +1,122 @@
+@media screen and (max-width: 700px) {
+    // Navigation 
+    nav {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+        text-align: center;
+        height: 100vh;
+        width: 100%;
+        background-color: rgba(0, 0, 0, .7);
+        position: fixed;
+        top: 5px;
+        left: -1000px;
+        transition: all 0.4s ease;
+        z-index: 99;
+        ul.main-nav {
+            flex-direction: column;
+            margin-right: 0;
+            display: flex;
+            li {
+                margin: 5px 0 5px;
+                text-transform: uppercase;
+                a {
+                    color: #fff;
+                    font-size: 1.5em; //font-weight: 400;
+                    letter-spacing: 1px;
+                    padding: 5px;
+                }
+            }
+            li:nth-child(3) {
+                order: -1;
+            }
+        }
+    }
+    .container {
+        display: block !important;
+        position: fixed;
+        left: 15px;
+        top: 15px;
+        padding: 10px;
+        z-index: 99;
+    }
+    .burger {
+        cursor: pointer;
+        display: block;
+    }
+    .burger span {
+        background-color: #fff;
+        display: block;
+        width: 40px;
+        height: 4px;
+        margin: 5px 0 5px 0;
+        position: relative;
+        top: 0;
+        transition: all 0.3s ease;
+    }
+    .burger.open span:nth-child(2) {
+        width: 0;
+        opacity: 0;
+    }
+    .burger.open span:nth-child(1) {
+        transform: rotate(-45deg);
+        top: 9px;
+    }
+    .burger.open span:nth-child(3) {
+        transform: rotate(45deg);
+        top: -9px;
+    } 
+    
+    // Header 
+    header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 50vh;
+        img {
+            height: 250px;
+            width: 250px;
+        }
+    } 
+    
+    // Location
+
+   
+    
+    
+    // Footer 
+
+
+    footer {
+        padding: 15px 30px 30px 30px;
+       
+        color: #fff;
+        .heading {
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            h2,
+            h3 {
+                padding: 15px 0;
+            }
+            h2 {
+                color: #e35f52;
+            }
+            
+        }
+        .footer-contact {
+            display: flex;
+            justify-content: flex-start;
+           
+            li {
+                padding: 10px;
+            }
+        }
+        .footer-social {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 5px;
+        }
+    }
+}
+

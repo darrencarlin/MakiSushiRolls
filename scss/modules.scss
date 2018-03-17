@@ -1,0 +1,130 @@
+// Border Top Styles
+.border-top {
+    height: 5px;
+    width: 100%;
+    position: fixed;
+    position: sticky;
+    top: 0;
+    margin: 0 0 25px 0;
+    z-index: 99;
+}
+
+.open-gradient {
+    background: #11998e;
+    background: -webkit-linear-gradient(to right, #38ef7d, #11998e);
+    background: linear-gradient(to right, #38ef7d, #11998e);
+}
+
+.closed-gradient {
+    background: #cb2d3e;
+    background: -webkit-linear-gradient(to right, #ef473a, #cb2d3e);
+    background: linear-gradient(to right, #ef473a, #cb2d3e);
+}
+
+// Burger Menu
+.container {
+    display: none;
+}
+
+// Navigation
+.nav-logo {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+}
+
+// Header
+header {}
+
+// Our Philosophy
+.philosophy {
+    background-color: $blue;
+}
+
+// Reviews 
+.reviews {
+    height: 400px;
+    .review {
+        flex: 0 1 33.333%;
+        padding: 30px;
+        .review-stars,
+        .review-title,
+        .review-reviewer {
+            display: flex;
+            justify-content: center;
+        }
+        .review-stars,
+        .review-title,
+        .review-text,
+        .review-reviewer {
+            padding: 0 0 30px;
+        }
+        .review-stars,
+        .review-title {
+            color: #e76c67;
+            letter-spacing: 1px;
+        }
+        .review-stars {
+            color: gold;
+            svg {
+                margin: 0 5px;
+            }
+        }
+        .review-text,
+        .review-reviewer {
+            color: #666666;
+            line-height: 20px;
+            letter-spacing: 1px;
+            text-align: justify;
+        }
+        .review-reviewer {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            align-content: center;
+            align-items: center;
+            justify-content: center;
+            .avatar,
+            .reviewer {
+                margin: 0 5px;
+            }
+            .avatar {
+                width: 33px;
+                height: 33px;
+                border-radius: 50%;
+                overflow: hidden;
+            }
+        }
+    }
+    hr {
+        width: 90%;
+        margin: auto;
+        height: 1px;
+        border: 0;
+        border-top: 1px solid #bbb;
+        padding: 0;
+    }
+}
+
+// Our Rolls
+.rolls {
+    background-color: $blue;
+}
+
+// Our Menu
+.menu {}
+
+// Our Location
+.location {
+    background-color: $blue;
+}
+
+// Order Now
+.order-now {
+    height: 200px;
+}
+
+// Footer 
+footer {
+    background-color: $blue;
+}
