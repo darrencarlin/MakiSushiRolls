@@ -1,6 +1,6 @@
 $(document).ready(function () {
     
-    $(".header-logo").css("opacity","1")
+    $(".header-logo").css("opacity","1");
     
     
     // Fixed
@@ -8,10 +8,31 @@ $(document).ready(function () {
     let rolls = $("#rolls").offset().top;
     let menu = $("#menu").offset().top;
     let location = $("#location").offset().top;
+    let reviews = $("#reviews").offset().top;
+   
+    $("#reviewsContainer").on('touchmove touchstart touchend', function(e){
+        
+        let x = $(this).scrollLeft()
+        if (x > 950) {
+            $(".element").attr('class', 'fas fa-angle-double-left element');
+            
+        } else if ( x < 50) {
+            $(".element").attr('class', 'fas fa-angle-double-right element');
+            
+        }
+    });
+    
+    
+
+
     $(function scroll() {
         let lastScroll = 100;
-
+        
+       
         $(window).scroll(function (event) {
+            
+            console.log($("#reviewsContainer").scrollLeft());
+         
             let st = $(this).scrollTop();
             let top = 20;
 
@@ -25,17 +46,22 @@ $(document).ready(function () {
 
             }
 
-            if (st >= philosophy && st <= rolls) {
+            if (st < philosophy && st <= rolls) {
                 $(".nav-philosophy").css("color", "orange");
             } else {
                 $(".nav-philosophy").css("color", "#fff");
             }
-            if (st >= rolls && st <= menu) {
+            if (st > reviews && st < rolls) {
+                $(".nav-reviews").css("color", "orange");
+            } else {
+                $(".nav-reviews").css("color", "#fff");
+            }
+            if (st > rolls && st < menu) {
                 $(".nav-rolls").css("color", "orange");
             } else {
                 $(".nav-rolls").css("color", "#fff");
             }
-            if (st >= menu && st <= location) {
+            if (st > menu && st < location) {
                 $(".nav-menu").css("color", "orange");
             } else {
                 $(".nav-menu").css("color", "#fff");

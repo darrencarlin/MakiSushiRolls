@@ -28,3 +28,30 @@
 .white {
     color: #fff;
 }
+
+// Reviews Arrow
+
+@-webkit-keyframes pulse {
+    25% { transform: translateX(15px); color: gold; }  
+  }
+  
+  @-moz-keyframes pulse {
+    25% { transform: translateX(15px); color: gold; }  
+  }
+  
+  @-o-keyframes pulse {
+    25% { transform: translateX(15px); color: gold; }
+  }
+  
+  @keyframes pulse { 
+    25% { transform: translateX(15px); color: gold; } // changed to 25% to stop the sudden change to white
+  }
+  
+  .element {
+      transition: background-color 2s;
+      -webkit-animation: pulse 2s infinite; /* Safari 4+ */
+      -moz-animation:    pulse 2s infinite; /* Fx 5+ */
+      -o-animation:      pulse 2s infinite; /* Opera 12+ */
+      animation:         pulse 2s infinite; /* IE 10+, Fx 29+ */
+    }
+  

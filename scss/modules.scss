@@ -43,10 +43,10 @@ header {}
 
 // Reviews 
 .reviews {
-    height: 400px;
+   // height: 400px;
     .review {
         flex: 0 1 33.333%;
-        padding: 30px;
+        //padding: 30px;
         .review-stars,
         .review-title,
         .review-reviewer {
@@ -57,11 +57,11 @@ header {}
         .review-title,
         .review-text,
         .review-reviewer {
-            padding: 0 0 30px;
+            padding: 15px 0;
         }
         .review-stars,
         .review-title {
-            color: #e76c67;
+            color: #fff;
             letter-spacing: 1px;
         }
         .review-stars {
@@ -72,7 +72,7 @@ header {}
         }
         .review-text,
         .review-reviewer {
-            color: #666666;
+            color: #fff;
             line-height: 20px;
             letter-spacing: 1px;
             text-align: justify;
