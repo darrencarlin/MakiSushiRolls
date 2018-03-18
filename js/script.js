@@ -9,7 +9,8 @@ $(document).ready(function () {
     let menu = $("#menu").offset().top;
     let location = $("#location").offset().top;
     let reviews = $("#reviews").offset().top;
-   
+   let order =$("#order").offset().top;
+
     $("#reviewsContainer").on('touchmove touchstart touchend', function(e){
         
         let x = $(this).scrollLeft()
@@ -56,7 +57,7 @@ $(document).ready(function () {
             } else {
                 $(".nav-reviews").css("color", "#fff");
             }
-            if (st > rolls && st < menu) {
+            if (st >= rolls && st < menu) {
                 $(".nav-rolls").css("color", "orange");
             } else {
                 $(".nav-rolls").css("color", "#fff");
@@ -66,10 +67,16 @@ $(document).ready(function () {
             } else {
                 $(".nav-menu").css("color", "#fff");
             }
-            if (st >= location) {
+            if (st > location && st < order) {
                 $(".nav-location").css("color", "orange");
             } else {
                 $(".nav-location").css("color", "#fff");
+            }
+
+            if (st > order ) {
+                $(".nav-order").css("color", "orange");
+            } else {
+                $(".nav-order").css("color", "#fff");
             }
 
             lastScroll = st;

@@ -1,10 +1,51 @@
-
-
 @media screen and (max-width: 700px) {
-    // Navigation 
+    // Images 
+    %img {
+        position: relative;
+        overflow: hidden;
+        z-index: -1;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+    .image0 {
+        background-image: url("../images/img11.png");
+        margin-top: -20px;
+        @extend %img;
+    }
+    .image1 {
+        background-image: url("../images/img8-rotate.jpg");
+        height: 255px;
+        @extend %img;
+    }
+    .image2 {
+        background-image: url("../images/img12.png");
+        height: 255px;
+        margin-top: -20px;
+        @extend %img;
+    }
+    .image3 {
+        background-image: url("../images/img6-rotate.jpg");
+        height: 255px;
+        margin-top: -20px;
+        @extend %img;
+    }
+    .image4 {
+        background-image: url("../images/img10-rotate.png");
+        height: 255px;
+        margin-top: -20px;
+        @extend %img;
+    }
+    .image5 {
+        background-image: url("../images/img13.png");
+        height: 255px;
+        margin-top: -20px;
+        @extend %img;
+    } // Navigation 
     nav {
         display: flex;
         justify-content: center;
+        flex-direction: column;
         align-content: center;
         align-items: center;
         text-align: center;
@@ -16,7 +57,14 @@
         left: -1000px;
         transition: all 0.4s ease;
         z-index: 99;
-        ul.main-nav {
+        .nav-social {
+            display: flex;
+            li {
+                margin: 5px 0 5px 0;
+                padding: 0 15px;
+            }
+        }
+        .main-nav {
             flex-direction: column;
             margin-right: 0;
             display: flex;
@@ -82,6 +130,10 @@
     // philosophy 
     .philosophy {
         margin-bottom: 0;
+        margin-top: -20px;
+    } // Rolls
+    .rolls {
+        margin: 0 0 15px 0;
     } // Reviews 
     .reviews {
         margin: 0;
@@ -98,7 +150,7 @@
             display: flex;
             flex-wrap: nowrap;
             overflow-x: auto;
-            margin: 0;
+            margin: 0 0 15px 0;
         }
         .reviews-container {
             display: flex;
@@ -113,40 +165,57 @@
 }
 
 // Menu
-
 .deals {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     text-align: center;
-    
-.deal {
-    width: 110px;
-    height: 110px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-    border: 3px solid #fff;
-    border-radius: 50%;
-    margin: 10px;
-    text-align: center;
-   
-    h4 {
-        width: 85%;
-        text-transform: uppercase;
-        font-family: 'Roboto', sans-serif;
-        font-size: 1.2em;
-       
+    .deal {
+        width: 110px;
+        height: 110px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        border: 3px solid #fff;
+        border-radius: 50%;
+        margin: 10px;
+        text-align: center;
+        h4 {
+            width: 85%;
+            text-transform: uppercase;
+            font-family: 'Roboto', sans-serif;
+            font-size: 1.2em;
+        }
+        p {
+            font-weight: bold;
+            padding: 0;
+        }
     }
-    p {
-        font-weight: bold;
-        padding: 0;
+    ul.allergens {
+        font-weight: 300;
     }
-
 }
 
+// Location 
+.location {
+    margin: 0 0 15px 0;
+}
+
+// Order Now
+.order-now {
+    .deliveroo {
+        display: block;
+        margin: 0 auto;
+        width: 100%;
+        margin: 15px 0;
+        padding: 10px 0;
+        border: 3px solid #fff;
+        svg {
+            padding: 5px;
+        }
+    }
 }
 
 // Footer 
@@ -181,5 +250,12 @@ footer {
 @media screen and (max-width: 350px) {
     .reviews .reviews-container .review {
         margin: 0;
+    }
+    .order-now .deliveroo {
+        display: inline-block;
+        svg {
+            width: 80%;
+            margin: 0 auto;
+        }
     }
 }

@@ -5,7 +5,7 @@
     position: fixed;
     position: sticky;
     top: 0;
-    margin: 0 0 25px 0;
+   // margin: 0 0 25px 0;
     z-index: 99;
 }
 
@@ -43,7 +43,7 @@ header {}
 
 // Reviews 
 .reviews {
-   // height: 400px;
+    min-height: 450px;
     .review {
         flex: 0 1 33.333%;
         //padding: 30px;
@@ -112,7 +112,14 @@ header {}
 }
 
 // Our Menu
-.menu {}
+.menu {
+
+    .allergens li {
+        display: flex;
+        align-items: center;
+    }
+
+}
 
 // Our Location
 .location {
@@ -121,7 +128,7 @@ header {}
 
 // Order Now
 .order-now {
-    height: 200px;
+  
 }
 
 // Footer 

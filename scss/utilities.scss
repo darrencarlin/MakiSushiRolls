@@ -1,4 +1,58 @@
 // Utilities
+
+%allergen-icon {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 5px;
+    font-weight: bold;  
+}
+
+.soy {
+    background-color: #94c11e;
+    @extend %allergen-icon;
+   
+}
+
+.seasame {
+    background-color: #a28671;
+    @extend %allergen-icon;
+    margin-right: 0;
+}
+
+.egg {
+    background-color: #94c11e;
+    @extend %allergen-icon;
+}
+
+.dairy {
+    background-color: #2e2d83;
+    @extend %allergen-icon;
+}
+
+.crust {
+    background-color: #e54d42;
+    @extend %allergen-icon;
+}
+
+.fish {
+    background-color: #2e81b7;
+    @extend %allergen-icon;
+}
+
+.gluten {
+    background-color: #2abb9b;
+    @extend %allergen-icon;
+}
+
+.mustard {
+    background-color: #fca72b;
+    @extend %allergen-icon;
+}
+
 .bold {
     font-weight: bold;
 }

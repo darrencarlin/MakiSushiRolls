@@ -11,7 +11,7 @@
 
 body {
   font-family: 'Roboto', sans-serif;
-  background-color: #666666;
+  background-color: #3E454C;
   position: relative;
 }
 
@@ -55,7 +55,7 @@ ul {
 
 .map {
   width: 100%;
-  height: 300px;
+  height: 400px;
   margin-bottom: 30px;
 }
 
@@ -148,6 +148,56 @@ ul {
   margin: 5px auto;
 }
 
+.soy, .seasame, .egg, .dairy, .crust, .fish, .gluten, .mustard {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-right: 5px;
+  font-weight: bold;
+}
+
+.soy {
+  background-color: #94c11e;
+}
+
+.seasame {
+  background-color: #a28671;
+  margin-right: 0;
+}
+
+.egg {
+  background-color: #94c11e;
+}
+
+.dairy {
+  background-color: #2e2d83;
+}
+
+.crust {
+  background-color: #e54d42;
+}
+
+.fish {
+  background-color: #2e81b7;
+}
+
+.gluten {
+  background-color: #2abb9b;
+}
+
+.mustard {
+  background-color: #fca72b;
+}
+
 .bold {
   font-weight: bold;
 }
@@ -231,7 +281,6 @@ ul {
   position: -webkit-sticky;
   position: sticky;
   top: 0;
-  margin: 0 0 25px 0;
   z-index: 99;
 }
 
@@ -265,7 +314,11 @@ ul {
 }
 
 .philosophy {
-  background-color: #52aee3;
+  background-color: #7ECEFD;
+}
+
+.reviews {
+  min-height: 450px;
 }
 
 .reviews .review {
@@ -356,22 +409,63 @@ ul {
 }
 
 .rolls {
-  background-color: #52aee3;
+  background-color: #7ECEFD;
+}
+
+.menu .allergens li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .location {
-  background-color: #52aee3;
-}
-
-.order-now {
-  height: 200px;
+  background-color: #7ECEFD;
 }
 
 footer {
-  background-color: #52aee3;
+  background-color: #7ECEFD;
 }
 
 @media screen and (max-width: 700px) {
+  .image0, .image1, .image2, .image3, .image4, .image5 {
+    position: relative;
+    overflow: hidden;
+    z-index: -1;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+  .image0 {
+    background-image: url("../images/img11.png");
+    margin-top: -20px;
+  }
+  .image1 {
+    background-image: url("../images/img8-rotate.jpg");
+    height: 255px;
+  }
+  .image2 {
+    background-image: url("../images/img12.png");
+    height: 255px;
+    margin-top: -20px;
+  }
+  .image3 {
+    background-image: url("../images/img6-rotate.jpg");
+    height: 255px;
+    margin-top: -20px;
+  }
+  .image4 {
+    background-image: url("../images/img10-rotate.png");
+    height: 255px;
+    margin-top: -20px;
+  }
+  .image5 {
+    background-image: url("../images/img13.png");
+    height: 255px;
+    margin-top: -20px;
+  }
   nav {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -379,6 +473,10 @@ footer {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
     -ms-flex-line-pack: center;
     align-content: center;
     -webkit-box-align: center;
@@ -396,7 +494,16 @@ footer {
     transition: all 0.4s ease;
     z-index: 99;
   }
-  nav ul.main-nav {
+  nav .nav-social {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  nav .nav-social li {
+    margin: 5px 0 5px 0;
+    padding: 0 15px;
+  }
+  nav .main-nav {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
@@ -406,17 +513,17 @@ footer {
     display: -ms-flexbox;
     display: flex;
   }
-  nav ul.main-nav li {
+  nav .main-nav li {
     margin: 5px 0 5px;
     text-transform: uppercase;
   }
-  nav ul.main-nav li a {
+  nav .main-nav li a {
     color: #fff;
     font-size: 1.5em;
     letter-spacing: 1px;
     padding: 5px;
   }
-  nav ul.main-nav li:nth-child(4) {
+  nav .main-nav li:nth-child(4) {
     -webkit-box-ordinal-group: 0;
     -ms-flex-order: -1;
     order: -1;
@@ -479,6 +586,10 @@ footer {
   }
   .philosophy {
     margin-bottom: 0;
+    margin-top: -20px;
+  }
+  .rolls {
+    margin: 0 0 15px 0;
   }
   .reviews {
     margin: 0;
@@ -503,7 +614,7 @@ footer {
     -ms-flex-wrap: nowrap;
     flex-wrap: nowrap;
     overflow-x: auto;
-    margin: 0;
+    margin: 0 0 15px 0;
   }
   .reviews .reviews-container {
     display: -webkit-box;
@@ -566,6 +677,27 @@ footer {
   padding: 0;
 }
 
+.deals ul.allergens {
+  font-weight: 300;
+}
+
+.location {
+  margin: 0 0 15px 0;
+}
+
+.order-now .deliveroo {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  margin: 15px 0;
+  padding: 10px 0;
+  border: 3px solid #fff;
+}
+
+.order-now .deliveroo svg {
+  padding: 5px;
+}
+
 footer {
   padding: 15px 30px 30px 30px;
   color: #fff;
@@ -610,5 +742,12 @@ footer .footer-social {
 @media screen and (max-width: 350px) {
   .reviews .reviews-container .review {
     margin: 0;
+  }
+  .order-now .deliveroo {
+    display: inline-block;
+  }
+  .order-now .deliveroo svg {
+    width: 80%;
+    margin: 0 auto;
   }
 }
