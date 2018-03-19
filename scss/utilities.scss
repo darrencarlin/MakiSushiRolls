@@ -1,14 +1,15 @@
 // Utilities
 
 %allergen-icon {
-    width: 20px;
-    height: 20px;
+    width: 18px;
+    height: 18px;
     border-radius: 50%;
     display: inline-flex;
     justify-content: center;
     align-items: center;
     margin-right: 5px;
-    font-weight: bold;  
+    font-weight: bold;
+    font-size: .8em;    
 }
 
 .soy {
@@ -65,6 +66,9 @@
     height: 100vh;
 }
 
+// Slide up Nav
+
+
 .stop-scroll {
     overflow: hidden;
 }
@@ -109,3 +113,4 @@
       animation:         pulse 2s infinite; /* IE 10+, Fx 29+ */
     }
   
+    

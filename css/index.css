@@ -36,6 +36,7 @@ a:focus {
 
 a {
   text-decoration: none;
+  color: #fff;
 }
 
 img {
@@ -149,8 +150,8 @@ ul {
 }
 
 .soy, .seasame, .egg, .dairy, .crust, .fish, .gluten, .mustard {
-  width: 20px;
-  height: 20px;
+  width: 18px;
+  height: 18px;
   border-radius: 50%;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -163,6 +164,7 @@ ul {
   align-items: center;
   margin-right: 5px;
   font-weight: bold;
+  font-size: .8em;
 }
 
 .soy {
@@ -749,5 +751,34 @@ footer .footer-social {
   .order-now .deliveroo svg {
     width: 80%;
     margin: 0 auto;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  nav, ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin-top: 15px;
+    z-index: 101;
+  }
+  nav li, ul li {
+    padding: 0 15px;
+  }
+  .nav-social {
+    display: none;
+  }
+  .header-logo {
+    display: none;
   }
 }

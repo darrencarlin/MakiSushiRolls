@@ -259,3 +259,40 @@ footer {
         }
     }
 }
+
+@media screen and (min-width: 700px) {
+
+    // Navigation
+
+    
+
+    nav, ul {
+    
+        display: flex;
+        flex-direction: row; 
+        justify-content: center;
+        align-items: center;
+        margin-top: 15px;
+      
+        z-index: 101;
+        li {
+            padding: 0 15px;
+        }
+    }
+
+    .nav-social {
+        display: none;
+    }
+
+    // Header 
+    
+    .header-logo {
+        display: none;
+    }
+
+    // header .header-logo {
+    //     display: block;
+    //     margin: 0 auto;
+    // }
+
+}

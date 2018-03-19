@@ -39,11 +39,11 @@ $(document).ready(function () {
 
             if (st > lastScroll) {
                 setTimeout(function () {
-                    //$("nav").addClass("fixed");
+                 
 
                 }, 300);
             } else if (st <= top) {
-                //$("nav").removeClass("fixed");
+           
 
             }
 
