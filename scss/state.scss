@@ -207,11 +207,12 @@
 .order-now {
     .deliveroo {
         display: block;
-        margin: 0 auto;
-        width: 100%;
-        margin: 15px 0;
+        margin: 20px auto;
+        width: 50%;
+        /* margin: 15px 0; */
         padding: 10px 0;
         border: 3px solid #fff;
+        text-align: center;
         svg {
             padding: 5px;
         }
@@ -261,38 +262,272 @@ footer {
 }
 
 @media screen and (min-width: 700px) {
+    // Skew
+
+    .skewed-bg {
+        transform: skew(0);
+    }
+    
+    .skewed-content {
+        transform: skew(0);
+    }
+
+    // Images
+
+    .image0,
+    .image2 {
+        position: relative;
+        overflow: hidden;
+        z-index: -1;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+    .image0 {
+        background-image: url("../images/img11.png");
+        height: 500px;
+    }
+    .image2 {
+        background-image: url("../images/IMG_0448.jpg");
+       height: 500px;
+        
+    }
 
     // Navigation
-
-    
-
-    nav, ul {
-    
+    nav,
+    ul {
         display: flex;
-        flex-direction: row; 
+        flex-direction: row;
         justify-content: center;
         align-items: center;
         margin-top: 15px;
-      
         z-index: 101;
         li {
             padding: 0 15px;
         }
     }
-
     .nav-social {
         display: none;
-    }
-
-    // Header 
-    
+    } // Header 
     .header-logo {
         display: none;
-    }
-
-    // header .header-logo {
+    } // header .header-logo {
     //     display: block;
     //     margin: 0 auto;
     // }
+    // Philosophy 
+    .philosophy {
+        margin-top: 0;
+        .heading {
+            width: 100%;
+            text-align: center;
+        }
+        .text {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            p:first-child {
+                display: flex;
+                width: 80%;
+                margin: 0 auto;
+                text-align: center;
+            }
+        }
+        .philosophy-lg {
+            display: flex;
+            justify-content: center;
+            .street-style-lg,
+            .sustainability-lg {
+                display: flex;
+                flex-direction: column;
+                width: 45%;
+                padding: 30px;
+                text-align: center;
+                span {
+                    display: flex;
+                    text-align: center;
+                }
+            }
+        }
+    } // Reviews 
+    .reviews-container {
+        position: relative;
+        transition: all .5s ease-in-out;
+    }
+    .reviews {
+        min-height: 375px;
+        .heading {
+            width: 100%;
+            text-align: center;
+        }
+    }
+    .review {
+        position: absolute;
+        left: 25%;
+        width: 50%;
+        margin: 0 auto;
+        transition: all .5s ease-in-out;
+        opacity: 0;
+    } // Sushi Rolls
+    .rolls {
+        min-height: 550px;
+        margin-bottom: 0;
+        .heading {
+            width: 100%;
+            text-align: center;
+        }
+        .text {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            p:first-child {
+                display: flex;
+                width: 80%;
+                margin: 0 auto;
+                text-align: center;
+            }
+            .fish-lg,
+            .veg-lg,
+            .asian-lg,
+            .options-lg {
+                display: flex;
+                flex-direction: column;
+                width: 45%;
+                padding: 15px;
+                text-align: center;
+            }
+        }
+    } // Menu 
+    .menu {
+        .heading {
+            width: 100%;
+            text-align: center;
+        }
+        .text {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            flex-direction: column;
+            p:nth-child(-n+3) {
+                display: flex;
+                width: 80%;
+                margin: 0 auto;
+                justify-content: center;
+            }
+            .allergens-lg {
+                p {
+                    text-align: center;
+                }
+                .heading {
+                    margin-top: 25px;
+                }
+            }
+        }
+        // .hand-rolls-lg {
+        //     max-height: 950px;
+        // }
+        .rolls-lg {
+            display: flex;
+            width: 80%;
+            margin: 0 auto;
+            justify-content: center;
+            flex-direction: column;
+            .heading,
+            .menu-text {
+                padding: 10px 0;
+            }
+            .menu-text {
+                text-align: center;
+            }
+        }
+        .allergens {
+            display: flex;
+            flex-direction: column;
+        }
+        .all-extras-lg {
+            display: flex;
+            text-align: center;
+            margin-top: 15px;
+            .miso-lg,
+            .extras-lg {
+                width: 25%;
+                text-align: center;
+            }
+            .platters-lg {
+                width: 50%;
+                text-align: center;
+            }
+        }
+    } // Location 
+    .location {
+        padding: 60px;
+        .heading {
+            width: 100%;
+            text-align: center;
+        }
+        .text {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            flex-direction: column;
+            width: 80%;
+            margin: 0 auto;
+            p {
+                text-align: center;
+                padding: 10px 0;
+                &:last-child {
+                    margin-bottom: 15px;
+                }
+            }
+        }
+    } // Order Now 
+    .order-now {
+        .heading {
+            width: 100%;
+            text-align: center;
+        }
+        .text {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            flex-direction: column;
+            width: 80%;
+            margin: 0 auto;
+            p {
+                text-align: center;
+                padding: 10px 0;
+                &:last-child {
+                    margin-bottom: 15px;
+                }
+            }
+        }
+    }
 
+    // Footer 
+
+    footer {
+
+        background-image: url("../images/img14.jpg");
+        position: relative;
+        overflow: hidden;
+        z-index: -1;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        ul {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        .footer-contact,
+        .footer-social {
+            flex-direction: row;
+        }
+        .footer-social {
+            justify-content: flex-start;
+        }
+    }
 }
