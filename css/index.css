@@ -77,7 +77,6 @@ ul {
 .menu,
 .reviews,
 .order-now {
-  margin: 15px 0;
   padding: 30px;
   color: #fff;
 }
@@ -444,6 +443,7 @@ footer {
   .image0 {
     background-image: url("../images/img11.png");
     margin-top: -20px;
+    height: 350px;
   }
   .image1 {
     background-image: url("../images/img8-rotate.jpg");
@@ -506,6 +506,9 @@ footer {
     margin: 5px 0 5px 0;
     padding: 0 15px;
   }
+  nav .nav-social svg {
+    font-size: 2em;
+  }
   nav .main-nav {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -525,11 +528,6 @@ footer {
     font-size: 1.5em;
     letter-spacing: 1px;
     padding: 5px;
-  }
-  nav .main-nav li:nth-child(4) {
-    -webkit-box-ordinal-group: 0;
-    -ms-flex-order: -1;
-    order: -1;
   }
   .container {
     display: block !important;
@@ -590,9 +588,6 @@ footer {
   .philosophy {
     margin-bottom: 0;
     margin-top: -20px;
-  }
-  .rolls {
-    margin: 0 0 15px 0;
   }
   .reviews {
     margin: 0;
@@ -684,14 +679,9 @@ footer {
   font-weight: 300;
 }
 
-.location {
-  margin: 0 0 15px 0;
-}
-
 .order-now .deliveroo {
   display: block;
   margin: 20px auto;
-  width: 50%;
   /* margin: 15px 0; */
   padding: 10px 0;
   border: 3px solid #fff;
@@ -700,6 +690,7 @@ footer {
 
 .order-now .deliveroo svg {
   padding: 5px;
+  width: 100%;
 }
 
 footer {
@@ -757,6 +748,10 @@ footer .footer-social {
 }
 
 @media screen and (min-width: 700px) {
+  body {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
   .skewed-bg {
     -webkit-transform: skew(0);
     -ms-transform: skew(0);
@@ -768,7 +763,11 @@ footer .footer-social {
     transform: skew(0);
   }
   .image0,
-  .image2 {
+  .image1,
+  .image2,
+  .image3,
+  .image4,
+  .image5 {
     position: relative;
     overflow: hidden;
     z-index: -1;
@@ -778,39 +777,52 @@ footer .footer-social {
   }
   .image0 {
     background-image: url("../images/img11.png");
+    height: 550px;
+    text-align: center;
+    padding-top: 50px;
+  }
+  .image3 {
+    background-image: url("../images/img6-rotate.jpg");
     height: 500px;
   }
   .image2 {
     background-image: url("../images/IMG_0448.jpg");
     height: 500px;
   }
-  nav,
-  ul {
+  .image4 {
+    background-image: url("../images/IMG_0445.jpg");
+    height: 500px;
+  }
+  .image5 {
+    background-image: url("../images/IMG_0443.jpg");
+    height: 500px;
+  }
+  nav {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: row;
-    flex-direction: row;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    height: 50px;
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    margin-top: 15px;
-    z-index: 101;
-  }
-  nav li,
-  ul li {
+    position: fixed;
     padding: 0 15px;
+    width: 100%;
+    z-index: 101;
+    background-color: rgba(103, 103, 103, 0.5);
+    max-width: 1200px;
   }
+  nav li {
+    padding: 0 10px;
+  }
+  .main-nav,
   .nav-social {
-    display: none;
-  }
-  .header-logo {
-    display: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
   .philosophy {
     margin-top: 0;
@@ -964,6 +976,9 @@ footer .footer-social {
     -ms-flex-pack: center;
     justify-content: center;
   }
+  .menu .text .allergens-lg li {
+    margin: 0 auto;
+  }
   .menu .text .allergens-lg p {
     text-align: center;
   }
@@ -1094,6 +1109,9 @@ footer .footer-social {
     -webkit-box-align: start;
     -ms-flex-align: start;
     align-items: flex-start;
+  }
+  footer ul li {
+    padding: 0 10px;
   }
   footer .footer-contact,
   footer .footer-social {

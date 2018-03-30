@@ -11,6 +11,7 @@
     .image0 {
         background-image: url("../images/img11.png");
         margin-top: -20px;
+        height: 350px;
         @extend %img;
     }
     .image1 {
@@ -63,6 +64,9 @@
                 margin: 5px 0 5px 0;
                 padding: 0 15px;
             }
+            svg {
+                font-size: 2em;
+            }
         }
         .main-nav {
             flex-direction: column;
@@ -79,7 +83,7 @@
                 }
             }
             li:nth-child(4) {
-                order: -1;
+                //order: -1;
             }
         }
     }
@@ -133,7 +137,7 @@
         margin-top: -20px;
     } // Rolls
     .rolls {
-        margin: 0 0 15px 0;
+       // margin: 0 0 15px 0;
     } // Reviews 
     .reviews {
         margin: 0;
@@ -200,7 +204,7 @@
 
 // Location 
 .location {
-    margin: 0 0 15px 0;
+   // margin: 0 0 15px 0;
 }
 
 // Order Now
@@ -208,13 +212,14 @@
     .deliveroo {
         display: block;
         margin: 20px auto;
-        width: 50%;
+        //width: 50%;
         /* margin: 15px 0; */
         padding: 10px 0;
         border: 3px solid #fff;
         text-align: center;
         svg {
             padding: 5px;
+            width: 100%;
         }
     }
 }
@@ -262,20 +267,23 @@ footer {
 }
 
 @media screen and (min-width: 700px) {
+    body {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
     // Skew
-
     .skewed-bg {
         transform: skew(0);
     }
-    
     .skewed-content {
         transform: skew(0);
-    }
-
-    // Images
-
+    } // Images
     .image0,
-    .image2 {
+    .image1,
+    .image2,
+    .image3,
+    .image4,
+    .image5 {
         position: relative;
         overflow: hidden;
         z-index: -1;
@@ -285,37 +293,66 @@ footer {
     }
     .image0 {
         background-image: url("../images/img11.png");
+        height: 550px;
+        text-align: center;
+        padding-top: 50px;
+    }
+    .image3 {
+        background-image: url("../images/img6-rotate.jpg");
         height: 500px;
     }
     .image2 {
         background-image: url("../images/IMG_0448.jpg");
-       height: 500px;
-        
+        height: 500px;
     }
-
-    // Navigation
-    nav,
-    ul {
+    .image4 {
+        background-image: url("../images/IMG_0445.jpg");
+        height: 500px;
+    }
+    .image5 {
+        background-image: url("../images/IMG_0443.jpg");
+        height: 500px;
+    } // // Navigation
+    // nav,
+    // ul {
+    //     display: flex;
+    //     flex-direction: row;
+    //     justify-content: center;
+    //     align-items: center;
+    //     margin-top: 15px;
+    //     z-index: 101;
+    //     li {
+    //         padding: 0 15px;
+    //     }
+    // }
+    // .nav-social {
+    //     display: none;
+    // } // Header 
+    // .header-logo {
+    //     display: none;
+    // } // header .header-logo {
+    // //     display: block;
+    // //     margin: 0 auto;
+    // // }
+    nav {
         display: flex;
-        flex-direction: row;
-        justify-content: center;
+        justify-content: space-between;
+        height: 50px;
         align-items: center;
-        margin-top: 15px;
+        position: fixed;
+        padding: 0 15px;
+        width: 100%;
         z-index: 101;
+        background-color: rgba(103, 103, 103, .5);
+        max-width: 1200px;
         li {
-            padding: 0 15px;
+            padding: 0 10px;
         }
     }
+    .main-nav,
     .nav-social {
-        display: none;
-    } // Header 
-    .header-logo {
-        display: none;
-    } // header .header-logo {
-    //     display: block;
-    //     margin: 0 auto;
-    // }
-    // Philosophy 
+        display: flex;
+    } // Philosophy 
     .philosophy {
         margin-top: 0;
         .heading {
@@ -371,7 +408,7 @@ footer {
     } // Sushi Rolls
     .rolls {
         min-height: 550px;
-        margin-bottom: 0;  
+        margin-bottom: 0;
         .heading {
             width: 100%;
             text-align: center;
@@ -417,6 +454,9 @@ footer {
                 justify-content: center;
             }
             .allergens-lg {
+                li {
+                    margin: 0 auto;
+                }
                 p {
                     text-align: center;
                 }
@@ -424,8 +464,7 @@ footer {
                     margin-top: 25px;
                 }
             }
-        }
-        // .hand-rolls-lg {
+        } // .hand-rolls-lg {
         //     max-height: 950px;
         // }
         .rolls-lg {
@@ -505,12 +544,8 @@ footer {
                 }
             }
         }
-    }
-
-    // Footer 
-
+    } // Footer 
     footer {
-
         background-image: url("../images/img14.jpg");
         position: relative;
         overflow: hidden;
@@ -521,6 +556,9 @@ footer {
         ul {
             flex-direction: column;
             align-items: flex-start;
+            li {
+                padding: 0 10px;
+            }
         }
         .footer-contact,
         .footer-social {
