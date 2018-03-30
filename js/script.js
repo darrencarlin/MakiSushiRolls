@@ -6,11 +6,11 @@ $(document).ready(function() {
        
 		$('html, body').animate({
             scrollTop: $($(this).attr('href')).offset().top
-  
-        }, 1000);
+		}, 1000);
+		$("body").removeClass("stop-scroll");
         $(".burger").removeClass("open");
         $("nav").removeClass("slide-in");
-        $("body").removeClass("stop-scroll");
+      
         clicks = 0
 		return !1
 		
