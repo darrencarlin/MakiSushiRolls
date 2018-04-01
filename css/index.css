@@ -5,8 +5,6 @@
   box-sizing: border-box;
   -webkit-tap-highlight-color: transparent;
   -webkit-tap-highlight-color: transparent;
-  -webkit-user-select: none;
-  -webkit-touch-callout: none;
 }
 
 body {
@@ -106,7 +104,8 @@ ul {
   padding: 15px 0;
 }
 
-.philosophy .heading h2, .philosophy .heading h4,
+.philosophy .heading h2,
+.philosophy .heading h4,
 .rolls .heading h2,
 .rolls .heading h4,
 .location .heading h2,
@@ -431,6 +430,80 @@ footer {
   background-color: #7ECEFD;
 }
 
+form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding: 30px;
+  position: relative;
+  z-index: 100;
+}
+
+form input,
+form textarea {
+  padding: 10px;
+  margin: 15px 0;
+  border-radius: 3px;
+  border: 1px solid transparent;
+  border-top: none;
+  border-bottom: 1px solid #ddd;
+  -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.39), 0 -1px 1px #fff, 0 1px 0 #fff;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.39), 0 -1px 1px #fff, 0 1px 0 #fff;
+}
+
+form textarea {
+  resize: vertical;
+}
+
+form .form-submit,
+form .validator,
+form .form-message {
+  width: 10%;
+  -ms-flex-item-align: end;
+  align-self: flex-end;
+  min-width: 130px;
+  max-width: 100%;
+  text-align: center;
+}
+
+form .form-submit {
+  border-radius: 3px;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  background-color: transparent;
+  color: #fff;
+  padding: 15px;
+  border: 1px solid;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 700px) {
+  form {
+    padding: 0;
+  }
+  form .form-submit,
+  form .validator {
+    -ms-flex-item-align: center;
+    align-self: center;
+  }
+  form .contact-form {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  form .form-submit,
+  form .validator {
+    width: 70%;
+  }
+  form .form-message {
+    margin: 5px auto;
+  }
+}
+
 @media screen and (max-width: 700px) {
   .image0, .image1, .image2, .image3, .image4, .image5 {
     position: relative;
@@ -446,7 +519,7 @@ footer {
     height: 350px;
   }
   .image1 {
-    background-image: url("../images/img8-rotate.jpg");
+    background-image: url("../images/img8-rotate.png");
     height: 255px;
   }
   .image2 {
@@ -455,7 +528,7 @@ footer {
     margin-top: -20px;
   }
   .image3 {
-    background-image: url("../images/img6-rotate.jpg");
+    background-image: url("../images/img6-rotate.png");
     height: 255px;
     margin-top: -20px;
   }
@@ -694,8 +767,14 @@ footer {
 }
 
 footer {
+  background-image: url("../images/img14.png");
+  position: relative;
+  overflow: hidden;
+  z-index: -1;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   padding: 15px 30px 30px 30px;
-  color: #fff;
 }
 
 footer .heading {
@@ -712,26 +791,41 @@ footer .heading h2 {
   color: #e35f52;
 }
 
-footer .footer-contact {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
+footer ul {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
 }
 
-footer .footer-contact li {
-  padding: 10px;
+footer ul li {
+  padding: 0 10px;
 }
 
+footer .footer-contact,
 footer .footer-social {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-  justify-content: space-around;
   margin-top: 5px;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+footer .footer-contact li,
+footer .footer-social li {
+  padding: 10px;
+}
+
+footer .footer-social {
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
 }
 
 @media screen and (max-width: 350px) {
@@ -782,19 +876,19 @@ footer .footer-social {
     padding-top: 50px;
   }
   .image3 {
-    background-image: url("../images/img6-rotate.jpg");
+    background-image: url("../images/img6-rotate.png");
     height: 500px;
   }
   .image2 {
-    background-image: url("../images/IMG_0448.jpg");
+    background-image: url("../images/IMG_0448.png");
     height: 500px;
   }
   .image4 {
-    background-image: url("../images/IMG_0445.jpg");
+    background-image: url("../images/IMG_0445.png");
     height: 500px;
   }
   .image5 {
-    background-image: url("../images/IMG_0443.jpg");
+    background-image: url("../images/IMG_0443.png");
     height: 500px;
   }
   nav {
@@ -812,11 +906,22 @@ footer .footer-social {
     padding: 0 15px;
     width: 100%;
     z-index: 101;
-    background-color: rgba(103, 103, 103, 0.5);
+    background-color: rgba(0, 0, 0, 0.5);
     max-width: 1200px;
+    -webkit-transition: opacity .5s ease-in-out;
+    -o-transition: opacity .5s ease-in-out;
+    transition: opacity .5s ease-in-out;
   }
   nav li {
     padding: 0 10px;
+  }
+  nav .main-nav a {
+    padding: 5px;
+    display: block;
+    color: #eee;
+  }
+  nav .main-nav a:hover {
+    color: #fff;
   }
   .main-nav,
   .nav-social {
@@ -885,7 +990,7 @@ footer .footer-social {
     transition: all .5s ease-in-out;
   }
   .reviews {
-    min-height: 375px;
+    min-height: 400px;
   }
   .reviews .heading {
     width: 100%;
@@ -1063,6 +1168,10 @@ footer .footer-social {
   .location .text p:last-child {
     margin-bottom: 15px;
   }
+  .contact-form {
+    width: 60%;
+    margin: 0 auto;
+  }
   .order-now .heading {
     width: 100%;
     text-align: center;
@@ -1091,38 +1200,5 @@ footer .footer-social {
   }
   .order-now .text p:last-child {
     margin-bottom: 15px;
-  }
-  footer {
-    background-image: url("../images/img14.jpg");
-    position: relative;
-    overflow: hidden;
-    z-index: -1;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-  }
-  footer ul {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -webkit-box-align: start;
-    -ms-flex-align: start;
-    align-items: flex-start;
-  }
-  footer ul li {
-    padding: 0 10px;
-  }
-  footer .footer-contact,
-  footer .footer-social {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: row;
-    flex-direction: row;
-  }
-  footer .footer-social {
-    -webkit-box-pack: start;
-    -ms-flex-pack: start;
-    justify-content: flex-start;
   }
 }

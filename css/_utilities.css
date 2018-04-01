@@ -1,0 +1,126 @@
+.soy, .seasame, .egg, .dairy, .crust, .fish, .gluten, .mustard {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-right: 5px;
+  font-weight: bold;
+  font-size: .8em;
+}
+
+.soy {
+  background-color: #94c11e;
+}
+
+.seasame {
+  background-color: #a28671;
+  margin-right: 0;
+}
+
+.egg {
+  background-color: #94c11e;
+}
+
+.dairy {
+  background-color: #2e2d83;
+}
+
+.crust {
+  background-color: #e54d42;
+}
+
+.fish {
+  background-color: #2e81b7;
+}
+
+.gluten {
+  background-color: #2abb9b;
+}
+
+.mustard {
+  background-color: #fca72b;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.slide-in {
+  left: 0;
+  top: 5px;
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+}
+
+.stop-scroll {
+  overflow: hidden;
+}
+
+.skewed-bg {
+  -webkit-transform: skew(0, -5deg);
+  -ms-transform: skew(0, -5deg);
+  transform: skew(0, -5deg);
+}
+
+.skewed-content {
+  -webkit-transform: skew(0, 5deg);
+  -ms-transform: skew(0, 5deg);
+  transform: skew(0, 5deg);
+}
+
+.white {
+  color: #fff;
+}
+
+@-webkit-keyframes pulse {
+  25% {
+    -webkit-transform: translateX(15px);
+    transform: translateX(15px);
+    color: gold;
+  }
+}
+
+@-moz-keyframes pulse {
+  25% {
+    transform: translateX(15px);
+    color: gold;
+  }
+}
+
+@-o-keyframes pulse {
+  25% {
+    transform: translateX(15px);
+    color: gold;
+  }
+}
+
+@keyframes pulse {
+  25% {
+    -webkit-transform: translateX(15px);
+    transform: translateX(15px);
+    color: gold;
+  }
+}
+
+.element {
+  -webkit-transition: background-color 2s;
+  -o-transition: background-color 2s;
+  transition: background-color 2s;
+  -webkit-animation: pulse 2s infinite;
+  /* Safari 4+ */
+  -moz-animation: pulse 2s infinite;
+  /* Fx 5+ */
+  -o-animation: pulse 2s infinite;
+  /* Opera 12+ */
+  animation: pulse 2s infinite;
+  /* IE 10+, Fx 29+ */
+}

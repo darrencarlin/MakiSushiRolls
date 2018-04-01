@@ -1,32 +1,46 @@
-$(document).ready(function() {
-    
-    let clicks = 0;
-    
-    $('a').click(function() {
-       
+$(document).ready(function () {
+
+	let clicks = 0;
+
+	$('a').click(function () {
+
 		$('html, body').animate({
-            scrollTop: $($(this).attr('href')).offset().top
+			scrollTop: $($(this).attr('href')).offset().top
 		}, 1000);
 		$("body").removeClass("stop-scroll");
-        $(".burger").removeClass("open");
-        $("nav").removeClass("slide-in");
-      
-        clicks = 0
+		$(".burger").removeClass("open");
+		$("nav").removeClass("slide-in");
+
+		clicks = 0
 		return !1
-		
+
 	})
+
 	$(".header-logo").css("opacity", "1");
+
+	let randomnumber1 = Math.floor(Math.random() * (4 - 0 + 1)) + 1;
+	let randomnumber2 = Math.floor(Math.random() * (4 - 0 + 1)) + 1;
+	let answer = randomnumber1 + randomnumber2;
+	let placeholder = `What is ${randomnumber1} + ${randomnumber2} ?`;
+	$(".validator").attr("placeholder", placeholder);
 	let review = $(".review");
-	displayReviews();
-	var reviewTimer = setInterval(displayReviews, 5000);
+	var reviewTimer = setInterval(displayReviews, 6000);
+
 
 	function displayReviews() {
+	
 		var randomnumber = Math.floor(Math.random() * (4 - 0 + 1)) + 0;
 		review[randomnumber].style.opacity = "1";
-		setTimeout(function() {
+		setTimeout(function () {
 			review[randomnumber].style.opacity = "0";
 		}, 5000);
+		
+		
+		
 	}
+
+
+
 	// Fixed
 	let philosophy = $("#philosophy").offset().top;
 	let rolls = $("#rolls").offset().top;
@@ -34,56 +48,34 @@ $(document).ready(function() {
 	let location = $("#location").offset().top;
 	let reviews = $("#reviews").offset().top;
 	let order = $("#order").offset().top;
-	$("#reviewsContainer").on('touchmove touchstart touchend', function(e) {
-		let x = $(this).scrollLeft()
-		if (x > 950) {
-			$(".element").attr('class', 'fas fa-angle-double-left element');
-		} else if (x < 50) {
-			$(".element").attr('class', 'fas fa-angle-double-right element');
-		}
-	});
+	let width = $(window).width();
 	$(function scroll() {
 		let lastScroll = 100;
-		$(window).scroll(function(event) {
-			console.log($("#reviewsContainer").scrollLeft());
+		$(window).scroll(function (event) {
+
 			let st = $(this).scrollTop();
 			let top = 20;
-			if (st > lastScroll) {
-				setTimeout(function() {}, 300);
-			} else if (st <= top) {}
-			if (st < philosophy && st <= rolls) {
-				$(".nav-philosophy").css("color", "orange");
-			} else {
-				$(".nav-philosophy").css("color", "#fff");
+
+			if (st > lastScroll && width > 700) {
+				setTimeout(function () {
+					$("nav").css("opacity", "0");
+					$("nav").css("pointer-events", "none");
+				}, 300);
+			} else if (st <= lastScroll) {
+				$("nav").css("opacity", "1");
+				$("nav").css("pointer-events", "initial");
 			}
-			if (st > reviews && st < rolls) {
-				$(".nav-reviews").css("color", "orange");
-			} else {
-				$(".nav-reviews").css("color", "#fff");
-			}
-			if (st >= rolls && st < menu) {
-				$(".nav-rolls").css("color", "orange");
-			} else {
-				$(".nav-rolls").css("color", "#fff");
-			}
-			if (st > menu && st < location) {
-				$(".nav-menu").css("color", "orange");
-			} else {
-				$(".nav-menu").css("color", "#fff");
-			}
-			if (st > location && st < order) {
-				$(".nav-location").css("color", "orange");
-			} else {
-				$(".nav-location").css("color", "#fff");
-			}
-			if (st > order) {
-				$(".nav-order").css("color", "orange");
-			} else {
-				$(".nav-order").css("color", "#fff");
-			}
+
 			lastScroll = st;
 		});
 	});
+
+
+	if (width > 700) {
+
+		displayReviews();
+	}
+
 	// Border Top Open Indicator
 	var date = new Date();
 	var hours = date.getHours();
@@ -101,24 +93,83 @@ $(document).ready(function() {
 		}
 	}
 
-	$(".burger").on("click", function() {
-       
+	$(".burger").on("click", function () {
+
 		if (clicks % 2 == 0) {
 			$(this).addClass("open");
 			$("nav").addClass("slide-in");
 			$("body").addClass("stop-scroll"); // Potentiall Unnecessary
-			document.ontouchmove = function(e) {
-				e.preventDefault();
-			};
+			// document.ontouchmove = function (e) {
+			// 	e.preventDefault();
+			// };
 		} else {
 			$(this).removeClass("open");
 			$("nav").removeClass("slide-in");
 			$("body").removeClass("stop-scroll"); // Potentiall Unnecessary
-			document.ontouchmove = function(e) {
-				return true;
-			};
-        }
-        
+			// document.ontouchmove = function (e) {
+			// 	return true;
+			// };
+		}
+
 		clicks++;
 	});
+
+
+	/**************** 
+	 * AJAX Request * 
+	 ****************/
+
+	// Get the form.
+	var form = $('#ajax-contact');
+
+	// Get the messages div.
+	var formMessages = $('#form-messages');
+
+	// Set up an event listener for the contact form.
+	$('form').submit(function (e) {
+		// Stop the browser from submitting the form.
+		e.preventDefault();
+
+		let guess = parseInt($(".validator").val());
+		if (guess === answer) {
+
+			// Serialize the form data.
+			var formData = $('form').serialize();
+
+			// Submit the form using AJAX.
+			$.ajax({
+					type: 'POST',
+					url: $('form').attr('action'),
+					data: formData
+				})
+				.done(function (response) {
+					// Add success text to div
+					$('#formMessages').text('Thanks for your message, Ill be back to you as soon as possible!');
+					// Clear the form
+					$('#name, #email, #message').val('');
+					// Re-enter placeholders.
+					$('input[name=name]').attr('placeholder', 'Name:');
+					$('input[name=email]').attr('placeholder', 'Email:');
+					$('input[name=message]').attr('placeholder', 'Your Message:');
+
+				})
+				.fail(function (data) {
+
+					// Set the message text.
+					if (data.responseText !== '') {
+						$('#formMessages').text(data.responseText);
+					} else {
+						$('#formMessages').text('Oops! An error occured and your message could not be sent.');
+					}
+				});
+			//} else {
+			//    $('#formMessages').text('Oops! The sum was wrong');
+			// }
+		} else {
+			$('#formMessages').text('Oops! Sum Error');
+			$('.validator').val('');
+		}
+
+	});
+
 });
