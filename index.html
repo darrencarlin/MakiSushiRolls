@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta content="" name="description">
+    <meta content="Maki Sushi Rolls located in Cork City Ireland are the first Sushi Hand Roll shop in Ireland. Dedicated to making fresh rolls daily with local ingredients sourced within the English Market Cork City." name="description">
     <meta content="IE=edge" http-equiv="X-UA-Compatible">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <title>Maki Sushi Rolls</title>
@@ -469,6 +469,7 @@
                 <p>We make our fresh sushi rolls everyday at our stall in Irelands most famous food market the English Market
                     situated in the heart of Cork City.</p>
                 <p>We are open Monday - Saturday, 9am - 6pm.</p>
+                <p>We are closed on all the usual bank holidays that land during Mon-Fri.</p>
 
             </div>
             <div class="heading skewed-content">
@@ -581,11 +582,17 @@
 
 
             var maki = {
-                info: `Maki Sushi Rolls <br>
-	                          The English Market <br>
-	                          Grande Parade<br>
-	                          Cork City<br>
-	                          <a href="https://goo.gl/maps/xcmEWUfn3JD2">Get Directions<\/a>`,
+                info: ` 
+                <ul class="">
+                    <li>Maki Sushi Rolls</li>
+                    <li>Unit 9</li>
+                    <li>The English Market</li>
+                    <li>Grand Parade</li>
+                    <li>Cork City</li>
+                    <li>T12 Y75C</li>
+                </ul>
+                <br>
+                <a href="https://goo.gl/maps/xcmEWUfn3JD2">Get Directions</a>`,
                 lat: 51.897978,
                 long: -8.473690
             };
@@ -761,6 +768,7 @@
                 marker = new google.maps.Marker({
                     position: new google.maps.LatLng(locations[i][1], locations[i][2]),
                     map: map
+                   
                 });
 
                 google.maps.event.addListener(marker, 'click', (function (marker, i) {

@@ -58,6 +58,13 @@ ul {
     width: 100%;
     height: 400px;
     margin-bottom: 30px;
+    div, a {
+        color: #000;
+    }
+    a {
+        font-weight: bold;
+        
+    }
 }
 
 .text,

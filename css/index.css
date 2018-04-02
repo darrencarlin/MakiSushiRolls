@@ -59,6 +59,14 @@ ul {
   margin-bottom: 30px;
 }
 
+.map div, .map a {
+  color: #000;
+}
+
+.map a {
+  font-weight: bold;
+}
+
 .text,
 .reviews-container {
   -webkit-overflow-scrolling: touch;
@@ -1070,6 +1078,7 @@ footer .footer-social {
     justify-content: center;
     -ms-flex-direction: column;
     flex-direction: column;
+    margin-bottom: 20px;
   }
   .menu .text p:nth-child(-n+3) {
     display: -webkit-box;
