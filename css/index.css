@@ -243,58 +243,29 @@ ul {
   background-color: #3E454C;
 }
 
-@-webkit-keyframes pulse {
-  25% {
-    -webkit-transform: translateX(15px);
-    transform: translateX(15px);
-    color: gold;
-  }
-}
-
-@-moz-keyframes pulse {
-  25% {
-    transform: translateX(15px);
-    color: gold;
-  }
-}
-
-@-o-keyframes pulse {
-  25% {
-    transform: translateX(15px);
-    color: gold;
-  }
-}
-
-@keyframes pulse {
-  25% {
-    -webkit-transform: translateX(15px);
-    transform: translateX(15px);
-    color: gold;
-  }
-}
-
-.element {
-  -webkit-transition: background-color 2s;
-  -o-transition: background-color 2s;
-  transition: background-color 2s;
-  -webkit-animation: pulse 2s infinite;
-  /* Safari 4+ */
-  -moz-animation: pulse 2s infinite;
-  /* Fx 5+ */
-  -o-animation: pulse 2s infinite;
-  /* Opera 12+ */
-  animation: pulse 2s infinite;
-  /* IE 10+, Fx 29+ */
+.open-closed {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  padding-left: 20px;
+  opacity: 0;
+  -webkit-transition: all .3s ease-in-out;
+  -o-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
 }
 
 .border-top {
-  height: 5px;
+  height: 25px;
   width: 100%;
   position: fixed;
   position: -webkit-sticky;
   position: sticky;
   top: 0;
   z-index: 99;
+  -webkit-transition: all .3s ease-in-out;
+  -o-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
 }
 
 .open-gradient {

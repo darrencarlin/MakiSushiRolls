@@ -72,7 +72,6 @@ $(document).ready(function () {
 
 
 	if (width > 700) {
-
 		displayReviews();
 	}
 
@@ -85,12 +84,24 @@ $(document).ready(function () {
 	var iTag = $("#i");
 	var timer = setInterval(timer, 1000);
 
-	function timer() {
-		if (hours >= 9 && hours < 18 && days > 0) {
+	function timer() { 
+		if (hours >= 9 && hours < 18 && days > 0) { 
 			borderTop.addClass("open-gradient");
+			$(".open-closed").html("<small><b>We are open, come get some sushi!</b></small>");
+			$(".open-closed").css("opacity", "1");   
 		} else {
 			borderTop.addClass("closed-gradient");
+			$(".open-closed").html("<small><b>We are closed :( </b></small>");
+			$(".open-closed").css("opacity", "1");  
 		}
+		setTimeout(adjustHeight, 3000);
+	}
+	
+	function adjustHeight() {
+		$(".open-closed").css("opacity", "0");
+		setTimeout(function(){
+			$(".border-top").css("height", "5px"); 
+		},300)
 	}
 
 	$(".burger").on("click", function () {
