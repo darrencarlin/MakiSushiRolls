@@ -239,6 +239,10 @@ ul {
   color: #fff;
 }
 
+.grey {
+  background-color: #3E454C;
+}
+
 @-webkit-keyframes pulse {
   25% {
     -webkit-transform: translateX(15px);

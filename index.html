@@ -3,7 +3,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta content="Maki Sushi Rolls located in Cork City Ireland are the first Sushi Hand Roll shop in Ireland. Dedicated to making fresh rolls daily with local ingredients sourced within the English Market Cork City." name="description">
+    <meta content="Maki Sushi Rolls located in Cork City Ireland are the first Sushi Hand Roll shop in Ireland. Dedicated to making fresh rolls daily with local ingredients sourced within the English Market Cork City."
+        name="description">
     <meta content="IE=edge" http-equiv="X-UA-Compatible">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <title>Maki Sushi Rolls</title>
@@ -99,7 +100,7 @@
             </div>
         </section>
         <section class="image1 skewed-bg"></section>
-        <section class="reviews skewed-bg" id="reviews">
+        <section class="reviews skewed-bg grey" id="reviews">
             <div class="heading skewed-content">
                 <h2>Our Reviews
                     <!-- <i class="fas fa-angle-double-right element"></i>-->
@@ -282,7 +283,7 @@
             </div>
         </section>
         <section class="image2 skewed-bg"></section>
-        <section class="menu skewed-bg" id="menu">
+        <section class="menu skewed-bg grey" id="menu">
             <div class="heading skewed-content">
                 <h2>Our Menu</h2>
             </div>
@@ -339,7 +340,8 @@
                         <div class="heading">
                             <h4>Salmon Poké Roll</h4>
                         </div>
-                        <p class="menu-text">Fresh Organic Irish Salmon marinated with Tamari, Mirin &amp; Seasame Seed Oil. Edamame Radish, Spring Onion, Pickled Ginger &amp; Toasted Seasame Seeds.
+                        <p class="menu-text">Fresh Organic Irish Salmon marinated with Tamari, Mirin &amp; Seasame Seed Oil. Edamame Radish, Spring
+                            Onion, Pickled Ginger &amp; Toasted Seasame Seeds.
                             <span class="fish">F</span>
                             <span class="seasame">S</span>,
                             <span class="seasame">S</span>
@@ -494,8 +496,9 @@
                     <label for="message"></label>
                     <textarea name="message" id="message" rows="5" placeholder="Your Message:" required></textarea>
                     <input class="validator" id="validator" type="text">
-                    <input type="submit" class="form-submit" id="submit" value="Submit"></a>
-                    <div class="form-message" id="formMessages"></div> 
+                    <input type="submit" class="form-submit" id="submit" value="Submit">
+                    </a>
+                    <div class="form-message" id="formMessages"></div>
                 </form>
 
 
@@ -507,7 +510,7 @@
             <div class="map skewed-content" id="map"></div>
         </section>
         <section class="image5 skewed-bg"></section>
-        <section class="order-now skewed-bg" id="order">
+        <section class="order-now skewed-bg grey" id="order">
             <div class="heading skewed-content">
                 <h2>Order Now</h2>
             </div>
@@ -593,8 +596,8 @@
                 </ul>
                 <br>
                 <a href="https://goo.gl/maps/xcmEWUfn3JD2">Get Directions</a>`,
-                lat: 51.897978,
-                long: -8.473690
+                lat: 51.897847,
+                long: -8.474266
             };
 
             var locations = [
@@ -604,8 +607,8 @@
             var map = new google.maps.Map(document.getElementById('map'), {
                 zoom: 16,
                 center: {
-                    lat: 51.897978,
-                    lng: -8.473690
+                    lat: 51.897847,
+                    lng: -8.474266
                 },
                 mapTypeId: google.maps.MapTypeId.ROADMAP,
                 disableDefaultUI: true,
@@ -768,7 +771,7 @@
                 marker = new google.maps.Marker({
                     position: new google.maps.LatLng(locations[i][1], locations[i][2]),
                     map: map
-                   
+
                 });
 
                 google.maps.event.addListener(marker, 'click', (function (marker, i) {
