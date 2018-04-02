@@ -83,7 +83,7 @@ $(document).ready(function () {
 	var aTag = $("#openHours");
 	var iTag = $("#i");
 	var timer = setInterval(timer, 1000);
-
+	
 	function timer() { 
 		if (hours >= 9 && hours < 18 && days > 0) { 
 			borderTop.addClass("open-gradient");
