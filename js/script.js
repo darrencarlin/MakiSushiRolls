@@ -21,7 +21,7 @@ $(document).ready(function () {
 	let randomnumber1 = Math.floor(Math.random() * (4 - 0 + 1)) + 1;
 	let randomnumber2 = Math.floor(Math.random() * (4 - 0 + 1)) + 1;
 	let answer = randomnumber1 + randomnumber2;
-	let placeholder = "What is " + randomnumber1 + " " + randomnumber2 + "?";
+	let placeholder = "What is " + randomnumber1 + " + " + randomnumber2 + "?";
 	$(".validator").attr("placeholder", placeholder);
 	let review = $(".review");
 	var reviewTimer = setInterval(displayReviews, 6000);
