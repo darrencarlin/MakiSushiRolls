@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="utf-8">
     <meta content="Maki Sushi Rolls located in Cork City Ireland are the first Sushi Hand Roll shop in Ireland. Dedicated to making fresh rolls daily with local ingredients sourced within the English Market Cork City."
         name="description">
+        <meta content="Sushi Cork English Market Japanese Food" name="keywords">
     <meta content="IE=edge" http-equiv="X-UA-Compatible">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <title>Maki Sushi Rolls</title>
@@ -82,7 +82,7 @@
             </div>
             <div class="text skewed-content">
                 <p>At Maki Sushi Rolls, we are the entrepreneurs of sushi handrolls in Ireland, being the first business to
-                    bring sushi in a handroll form.</p>
+                    bring sushi in a handroll form, Australian style.</p>
                 <div class="philosophy-lg">
                     <div class="street-style-lg">
                         <div class="heading">
@@ -345,7 +345,7 @@
                         <div class="heading">
                             <h4>Salmon Poké Roll</h4>
                         </div>
-                        <p class="menu-text">Fresh Organic Irish Salmon marinated with Tamari, Mirin &amp; Seasame Seed Oil. Edamame Radish, Spring
+                        <p class="menu-text">Fresh Organic Irish Salmon marinated with Tamari, Mirin &amp; Seasame Seed Oil. Edamame, Radish, Spring
                             Onion, Pickled Ginger &amp; Toasted Seasame Seeds.
                             <span class="fish">F</span>
                             <span class="seasame">S</span>,
@@ -363,9 +363,12 @@
                         <div class="heading">
                             <h4>Terriaki Chicken Roll</h4>
                         </div>
-                        <p class="menu-text">Chicken with Terriaki Sauce, Spring Onion, Red Pepper &amp; Lettuce
+                        <p class="menu-text">Chicken with Terriaki Sauce, Mustard Mayo, Spring Onion, Lettuce &amp; Toasted Seasame Seeds.
                             <span class="soy">S</span>
                             <span class="gluten">G</span>
+                            <span class="mustard">M</span>
+                            <span class="seasame">S</span>,
+                            <span class="seasame">S</span>
                         </p>
                         <div class="heading">
                             <h4>Vegan Roll</h4>
@@ -476,9 +479,10 @@
                 <p>We make our fresh sushi rolls everyday at our stall in Irelands most famous food market the English Market
                     situated in the heart of Cork City.</p>
                 <p>We are open Monday - Saturday, 9am - 6pm.</p>
-                <p>We are closed on all the usual bank holidays that land during Mon-Fri.</p>
+                <p>We are closed on Sunday and Bank Holidays</p>
 
             </div>
+           
             <div class="heading skewed-content">
                 <h2>Contact</h2>
             </div>
@@ -491,6 +495,7 @@
                         <b>Call</b>
                     </a>
                 </p>
+                <p>More Content</p>
             </div>
             <div class="contact-form skewed-content">
                 <form id="ajax-contact" action="mail.php" method="post">
@@ -515,6 +520,7 @@
             <div class="map skewed-content" id="map"></div>
         </section>
         <section class="image5 skewed-bg"></section>
+        
         <section class="order-now skewed-bg grey" id="order">
             <div class="heading skewed-content">
                 <h2>Order Now</h2>
@@ -530,6 +536,20 @@
                 </a>
             </div>
         </section>
+        <section class="work-with-us skewed-bg blue" id="work">
+                <div class="heading skewed-content">
+                    <h2>Work With Us</h2>
+                </div>
+               
+                <div class="text skewed-content">
+                   
+                    <p>If you're interested in selling our sushi rolls in your 
+                        store, cafe, restuarant or interested in a franchise 
+                        opportunity with us, feel free to enquire using the contact form below.</p>
+             
+                  
+                </div>
+            </section>
         <footer class="white blue">
             <div class="heading">
                 <h2>Contact</h2>
@@ -590,16 +610,17 @@
 
 
             var maki = {
-                info:  '<ul>'+
-'                    <li>Maki Sushi Rolls</li>'+
-'                    <li>Unit 9</li>'+
-'                    <li>The English Market</li>'+
-'                    <li>Grand Parade</li>'+
-'                <li>Cork City</li>'+
-'                <li>T12 Y75C</li>'+
-'            </ul>'+
-'                <br>'+
-'                <a href=\'https://goo.gl/maps/xcmEWUfn3JD2\'>Get Directions</a>',
+                info: ` 
+                <ul class="">
+                    <li>Maki Sushi Rolls</li>
+                    <li>Unit 9</li>
+                    <li>The English Market</li>
+                    <li>Grand Parade</li>
+                    <li>Cork City</li>
+                    <li>T12 Y75C</li>
+                </ul>
+                <br>
+                <a href="https://goo.gl/maps/xcmEWUfn3JD2">Get Directions</a>`,
                 lat: 51.897847,
                 long: -8.474266
             };
